@@ -7,14 +7,12 @@
 //
 
 #import "CalculatorViewController.h"
-#import "Model.h"
 
 @interface CalculatorViewController ()
 
 @property (weak, nonatomic) IBOutlet UILabel *displayLabel;
 
-@property (nonatomic) int answer;
-@property (nonatomic) int value;
+@property (nonatomic) BOOL isUserInTheMiddleOfEnteringNumber;
 
 @end
 
@@ -29,15 +27,22 @@
 {
     NSLog(@"Hey button pressed! %@", [sender currentTitle]);
     
-    if ([self.displayLabel.text isEqualToString:@"0"])
-    {
-        self.displayLabel.text = sender.currentTitle;
-    }
-    else
+    if (self.isUserInTheMiddleOfEnteringNumber)
     {
         self.displayLabel.text = [self.displayLabel.text stringByAppendingString:sender.currentTitle];
     }
+    else
+    {
+        self.displayLabel.text = sender.currentTitle;
+        self.isUserInTheMiddleOfEnteringNumber = YES;
+    }
 }
+
+- (IBAction)clearButtonPressed:(UIButton *)sender
+   {
+       self.displayLabel.text = @"0";
+       self.isUserInTheMiddleOfEnteringNumber = NO;
+   }
 
 @end
 
