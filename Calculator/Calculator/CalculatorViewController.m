@@ -13,9 +13,6 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *displayLabel;
 
-@property (nonatomic) int answer;
-@property (nonatomic) int value;
-
 @end
 
 @implementation CalculatorViewController
@@ -25,11 +22,13 @@
     [super viewDidLoad];
 }
 
+//We added a operationButtonPressed function but
+//We haven't implimented it yet
 - (IBAction)operationButtonPressed:(id)sender
 {
     
 }
-
+ //Same with our enterButtonPressed function
 - (IBAction)enterButtonPressed
 {
     
