@@ -25,6 +25,16 @@
     [super viewDidLoad];
 }
 
+- (IBAction)operationButtonPressed:(id)sender
+{
+    
+}
+
+- (IBAction)enterButtonPressed
+{
+    
+}
+
 - (IBAction)numberButtonPressed:(UIButton *)sender
 {
     NSLog(@"Hey button pressed! %@", [sender currentTitle]);

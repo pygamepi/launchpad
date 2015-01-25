@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EF32ACC91A71CAF000552D95 /* CalculatorBrain.m in Sources */ = {isa = PBXBuildFile; fileRef = EF32ACC81A71CAF000552D95 /* CalculatorBrain.m */; };
+		EF32ACD11A71D04200552D95 /* CalculatorBrainTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EF32ACD01A71D04200552D95 /* CalculatorBrainTests.m */; };
 		EF45E3A41A6F1EBC00E59B62 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EF45E3A31A6F1EBC00E59B62 /* main.m */; };
 		EF45E3A71A6F1EBC00E59B62 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EF45E3A61A6F1EBC00E59B62 /* AppDelegate.m */; };
 		EF45E3AA1A6F1EBC00E59B62 /* CalculatorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF45E3A91A6F1EBC00E59B62 /* CalculatorViewController.m */; };
@@ -27,6 +29,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EF32ACC71A71CAF000552D95 /* CalculatorBrain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalculatorBrain.h; sourceTree = "<group>"; };
+		EF32ACC81A71CAF000552D95 /* CalculatorBrain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalculatorBrain.m; sourceTree = "<group>"; };
+		EF32ACD01A71D04200552D95 /* CalculatorBrainTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalculatorBrainTests.m; sourceTree = "<group>"; };
 		EF45E39E1A6F1EBC00E59B62 /* Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Calculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF45E3A21A6F1EBC00E59B62 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EF45E3A31A6F1EBC00E59B62 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -86,6 +91,8 @@
 				EF45E3A81A6F1EBC00E59B62 /* CalculatorViewController.h */,
 				EF45E3A91A6F1EBC00E59B62 /* CalculatorViewController.m */,
 				EF45E3AB1A6F1EBC00E59B62 /* Main.storyboard */,
+				EF32ACC71A71CAF000552D95 /* CalculatorBrain.h */,
+				EF32ACC81A71CAF000552D95 /* CalculatorBrain.m */,
 				EF45E3AE1A6F1EBC00E59B62 /* Images.xcassets */,
 				EF45E3B01A6F1EBC00E59B62 /* LaunchScreen.xib */,
 				EF45E3A11A6F1EBC00E59B62 /* Supporting Files */,
@@ -105,6 +112,7 @@
 		EF45E3BA1A6F1EBC00E59B62 /* CalculatorTests */ = {
 			isa = PBXGroup;
 			children = (
+				EF32ACD01A71D04200552D95 /* CalculatorBrainTests.m */,
 				EF45E3BD1A6F1EBC00E59B62 /* CalculatorTests.m */,
 				EF45E3BB1A6F1EBC00E59B62 /* Supporting Files */,
 			);
@@ -221,6 +229,7 @@
 			files = (
 				EF45E3AA1A6F1EBC00E59B62 /* CalculatorViewController.m in Sources */,
 				EF45E3A71A6F1EBC00E59B62 /* AppDelegate.m in Sources */,
+				EF32ACC91A71CAF000552D95 /* CalculatorBrain.m in Sources */,
 				EF45E3A41A6F1EBC00E59B62 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -229,6 +238,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF32ACD11A71D04200552D95 /* CalculatorBrainTests.m in Sources */,
 				EF45E3BE1A6F1EBC00E59B62 /* CalculatorTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

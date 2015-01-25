@@ -8,8 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import <XCTest/XCTest.h>
+#import "CalculatorBrain.h"
 
 @interface CalculatorBrainTests : XCTestCase
+
+@property (nonatomic, strong) CalculatorBrain* brain;
 
 @end
 
@@ -17,24 +20,21 @@
 
 - (void)setUp {
     [super setUp];
-    // Put setup code here. This method is called before the invocation of each test method in the class.
+    self.brain = [[CalculatorBrain alloc] init];
 }
 
 - (void)tearDown {
-    // Put teardown code here. This method is called after the invocation of each test method in the class.
     [super tearDown];
+    self.brain = nil;
 }
 
-- (void)testExample {
-    // This is an example of a functional test case.
-    XCTAssert(YES, @"Pass");
-}
-
-- (void)testPerformanceExample {
-    // This is an example of a performance test case.
-    [self measureBlock:^{
-        // Put the code you want to measure the time of here.
-    }];
+- (void)testAddition
+{
+    [self.brain pushOperand:5];
+    [self.brain pushOperand:10];
+    double result = [self.brain performOperation:@"+"];
+    XCTAssert(result == 15,@"Addittion must properly add 2 numbers");
+    
 }
 
 @end

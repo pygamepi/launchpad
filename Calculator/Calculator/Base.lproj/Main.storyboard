@@ -142,59 +142,81 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bw5-3w-nx8">
-                                <rect key="frame" x="152" y="192" width="50" height="50"/>
+                                <rect key="frame" x="391" y="424" width="50" height="50"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="Cnl-zI-2TX"/>
                                     <constraint firstAttribute="height" constant="50" id="Ho4-Dz-ySZ"/>
                                 </constraints>
-                                <state key="normal" title="1">
+                                <state key="normal" title="/">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="numberButtonPressed:" destination="5eC-0s-FVB" eventType="touchUpInside" id="j4k-gT-tgB"/>
+                                    <action selector="operationButtonPressed:" destination="5eC-0s-FVB" eventType="touchUpInside" id="StQ-Lt-EtT"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tQD-Nr-xPL">
-                                <rect key="frame" x="210" y="192" width="50" height="50"/>
+                                <rect key="frame" x="391" y="366" width="50" height="50"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="CwJ-93-FBH"/>
                                     <constraint firstAttribute="width" constant="50" id="ZrU-O9-Gd6"/>
                                 </constraints>
-                                <state key="normal" title="1">
+                                <state key="normal" title="*">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="numberButtonPressed:" destination="5eC-0s-FVB" eventType="touchUpInside" id="iah-Au-FEF"/>
+                                    <action selector="operationButtonPressed:" destination="5eC-0s-FVB" eventType="touchUpInside" id="yMt-3u-1UW"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wcu-rY-n6g">
-                                <rect key="frame" x="268" y="192" width="50" height="50"/>
+                                <rect key="frame" x="391" y="308" width="50" height="50"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="85K-6x-eat"/>
                                     <constraint firstAttribute="height" constant="50" id="BRI-hR-qm1"/>
                                 </constraints>
-                                <state key="normal" title="1">
+                                <state key="normal" title="-">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="numberButtonPressed:" destination="5eC-0s-FVB" eventType="touchUpInside" id="fhr-4c-enj"/>
+                                    <action selector="operationButtonPressed:" destination="5eC-0s-FVB" eventType="touchUpInside" id="iSN-j8-uzO"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cve-qm-oAZ">
-                                <rect key="frame" x="326" y="192" width="50" height="50"/>
+                                <rect key="frame" x="391" y="250" width="50" height="50"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="kD7-J6-F4A"/>
                                     <constraint firstAttribute="height" constant="50" id="uR3-CG-hpT"/>
                                 </constraints>
-                                <state key="normal" title="1">
+                                <state key="normal" title="+">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="numberButtonPressed:" destination="5eC-0s-FVB" eventType="touchUpInside" id="BU3-c4-zdi"/>
+                                    <action selector="operationButtonPressed:" destination="5eC-0s-FVB" eventType="touchUpInside" id="ru9-xL-hUS"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UTD-1U-iHv">
+                                <rect key="frame" x="333" y="424" width="50" height="50"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Enter">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="enterButtonPressed" destination="5eC-0s-FVB" eventType="touchUpInside" id="ETz-1c-NMk"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JGI-Sp-3T0">
+                                <rect key="frame" x="217" y="424" width="50" height="50"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Clear">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="numberButtonPressed:" destination="5eC-0s-FVB" eventType="touchUpInside" id="5lE-Pi-PBr"/>
                                 </connections>
                             </button>
                         </subviews>
