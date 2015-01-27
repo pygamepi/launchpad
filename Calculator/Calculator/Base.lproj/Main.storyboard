@@ -161,7 +161,6 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="numberButtonPressed:" destination="5eC-0s-FVB" eventType="touchUpInside" id="iah-Au-FEF"/>
                                     <action selector="operationButtonPressed:" destination="5eC-0s-FVB" eventType="touchUpInside" id="yMt-3u-1UW"/>
                                 </connections>
                             </button>
@@ -172,7 +171,6 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="numberButtonPressed:" destination="5eC-0s-FVB" eventType="touchUpInside" id="fhr-4c-enj"/>
                                     <action selector="operationButtonPressed:" destination="5eC-0s-FVB" eventType="touchUpInside" id="iSN-j8-uzO"/>
                                 </connections>
                             </button>
@@ -196,7 +194,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="enterButtonPressed" destination="5eC-0s-FVB" eventType="touchUpInside" id="ETz-1c-NMk"/>
+                                    <action selector="enterButtonPressed" destination="5eC-0s-FVB" eventType="touchUpInside" id="IeN-j1-YlT"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JGI-Sp-3T0">
@@ -208,6 +206,9 @@
                                 <state key="normal" title="Clear">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="clearButtonPressed:" destination="5eC-0s-FVB" eventType="touchUpInside" id="XrL-Rm-hfj"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.77512622480000004" green="1" blue="0.036453658049999997" alpha="1" colorSpace="calibratedRGB"/>

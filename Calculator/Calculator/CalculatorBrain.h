@@ -10,13 +10,8 @@
 
 @interface CalculatorBrain : NSObject
 
-//Announce that there are to function the app can use
-//The pushOperand function
 - (void)pushOperand:(double)operand;
 
-//And the performOperation function
 - (double)performOperation:(NSString *)operation;
-
-- (double)popOperand;
 
 @end

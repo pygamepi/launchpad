@@ -13,6 +13,8 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *displayLabel;
 
+@property (nonatomic) BOOL isUserInTheMiddleOfEnteringNumber;
+
 @property (nonatomic, strong) CalculatorBrain *brain;
 
 @end
@@ -24,33 +26,35 @@
     [super viewDidLoad];
 }
 
-//We added a operationButtonPressed function but
-//We haven't implimented it yet
 - (IBAction)operationButtonPressed:(id)sender
 {
-    double result = [self.brain performOperation:self.displayLabel.text];
     
-    [self.brain pushOperand:result];
 }
 
- //Same with our enterButtonPressed function
 - (IBAction)enterButtonPressed
 {
-    self.displayLabel.text = [NSString stringWithFormat:@"%.20lf", [self.brain popOperand]];
+    
 }
 
 - (IBAction)numberButtonPressed:(UIButton *)sender
 {
     NSLog(@"Hey button pressed! %@", [sender currentTitle]);
     
-    if ([self.displayLabel.text isEqualToString:@"0"])
-    {
-        self.displayLabel.text = sender.currentTitle;
-    }
-    else
+    if (self.isUserInTheMiddleOfEnteringNumber)
     {
         self.displayLabel.text = [self.displayLabel.text stringByAppendingString:sender.currentTitle];
     }
+    else
+    {
+        self.displayLabel.text = sender.currentTitle;
+        self.isUserInTheMiddleOfEnteringNumber = YES;
+    }
+}
+
+- (IBAction)clearButtonPressed:(UIButton *)sender
+{
+    self.displayLabel.text = @"0";
+    self.isUserInTheMiddleOfEnteringNumber = NO;
 }
 
 @end
