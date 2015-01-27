@@ -26,13 +26,10 @@
     [super viewDidLoad];
 }
 
-//We changed the numberButtonPressed function
 - (IBAction)numberButtonPressed:(UIButton *)sender
 {
     NSLog(@"Hey button pressed! %@", [sender currentTitle]);
     
-    //We check our bool to see if the user is in the middle entering
-    //a number
     if (self.isUserInTheMiddleOfEnteringNumber)
     {
         //If they are we append the current title of the button that
