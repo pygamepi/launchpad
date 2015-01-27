@@ -93,6 +93,32 @@
         // = to the result
         result = [self popOperand] + [self popOperand];
     }
+    else if ([operation isEqualToString:@"-"])
+    {
+        double num1, num2;
+        
+        num2 = [self popOperand];
+        num1 = [self popOperand];
+    
+        result = num1 - num2;
+    }
+    else if ([operation isEqualToString:@"*"])
+    {
+        result = [self popOperand] * [self popOperand];
+    }
+    else if ([operation isEqualToString:@"/"])
+    {
+        double num1, num2;
+        
+        num2 = [self popOperand];
+        num1 = [self popOperand];
+        
+        result = num1 / num2;
+    }
+    else
+    {
+        NSLog(@"Invalid Operation");
+    }
     
     //Then we return the result
     return result;

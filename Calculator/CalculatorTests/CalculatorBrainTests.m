@@ -52,6 +52,36 @@
     //do
     XCTAssert(result == 15,@"Addittion must properly add 2 numbers");
     
+    
+}
+
+- (void)testSubtraction
+{
+    [self.brain pushOperand:4];
+    [self.brain pushOperand:2];
+    double result = [self.brain performOperation:@"-"];
+    XCTAssert(result == 2,@"Subraction must properly subtract 2 numbers");
+ 
+}
+
+- (void)testMultiplication
+{
+    //Multiplication test
+    [self.brain pushOperand:4];
+    [self.brain pushOperand:2];
+    double result = [self.brain performOperation:@"*"];
+    XCTAssert(result == 8,@"Multiplication must properly multiply 2 numbers");
+ 
+}
+
+-(void)testDivision
+{
+    //Division test
+    [self.brain pushOperand:16];
+    [self.brain pushOperand:4];
+    double result = [self.brain performOperation:@"/"];
+    XCTAssert(result == 4,@"Division must properly divide 2 numbers");
+    
 }
 
 @end

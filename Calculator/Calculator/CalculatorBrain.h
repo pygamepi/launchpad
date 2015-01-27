@@ -17,6 +17,6 @@
 //And the performOperation function
 - (double)performOperation:(NSString *)operation;
 
-
+- (double)popOperand;
 
 @end

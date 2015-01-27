@@ -7,11 +7,13 @@
 //
 
 #import "CalculatorViewController.h"
-#import "Model.h"
+#import "CalculatorBrain.h"
 
 @interface CalculatorViewController ()
 
 @property (weak, nonatomic) IBOutlet UILabel *displayLabel;
+
+@property (nonatomic, strong) CalculatorBrain *brain;
 
 @end
 
@@ -26,12 +28,15 @@
 //We haven't implimented it yet
 - (IBAction)operationButtonPressed:(id)sender
 {
+    double result = [self.brain performOperation:self.displayLabel.text];
     
+    [self.brain pushOperand:result];
 }
+
  //Same with our enterButtonPressed function
 - (IBAction)enterButtonPressed
 {
-    
+    self.displayLabel.text = [NSString stringWithFormat:@"%.20lf", [self.brain popOperand]];
 }
 
 - (IBAction)numberButtonPressed:(UIButton *)sender
