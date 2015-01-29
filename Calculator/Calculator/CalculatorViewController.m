@@ -12,11 +12,9 @@
 @interface CalculatorViewController ()
 
 @property (weak, nonatomic) IBOutlet UILabel *displayLabel;
-
 @property (nonatomic) BOOL isUserInTheMiddleOfEnteringNumber;
-
+@property (weak, nonatomic) NSString *operator;
 @property (nonatomic, strong) CalculatorBrain *brain;
-
 @end
 
 @implementation CalculatorViewController
@@ -24,11 +22,16 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.brain = [[CalculatorBrain alloc] init];
 }
 
-- (IBAction)operationButtonPressed:(id)sender
+- (IBAction)operationButtonPressed:(UIButton *)sender
 {
-    
+    [self.brain pushOperand:self.displayLabel.text.doubleValue];
+    double result = [self.brain performOperation:[sender currentTitle]];
+    [self.brain pushOperand:result];
+    self.isUserInTheMiddleOfEnteringNumber = NO;
+    self.operator = [sender currentTitle];
 }
 
 - (IBAction)enterButtonPressed
@@ -51,7 +54,7 @@
     }
 }
 
-- (IBAction)clearButtonPressed:(UIButton *)sender
+- (IBAction)clearButtonPressed
 {
     self.displayLabel.text = @"0";
     self.isUserInTheMiddleOfEnteringNumber = NO;
