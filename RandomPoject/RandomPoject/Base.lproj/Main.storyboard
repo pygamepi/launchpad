@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="1Re-Wd-wnr">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Dog Table View Controller-->
+        <scene sceneID="YVv-Az-IYZ">
+            <objects>
+                <tableViewController id="GlS-pW-0jV" customClass="DogTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="S7w-9t-ShX">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="dog cell" id="Ywb-xC-AJm">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ywb-xC-AJm" id="IJv-5J-tb6">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="eyi-yM-A8V" kind="show" identifier="open dog detail view controller" id="olf-dW-DdH"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="GlS-pW-0jV" id="5lK-TR-ZSS"/>
+                            <outlet property="delegate" destination="GlS-pW-0jV" id="asJ-vF-Fhx"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="UwH-KQ-lkn"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1uV-Cd-006" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2370" y="-160"/>
+        </scene>
+        <!--Dog Detail View Controller-->
+        <scene sceneID="LbV-0R-Tna">
+            <objects>
+                <viewController id="eyi-yM-A8V" customClass="DogDetailViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="AsV-Yy-aut"/>
+                        <viewControllerLayoutGuide type="bottom" id="Qmg-dW-Wgj"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Mv5-U4-MOL">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lMe-Es-TMx">
+                                <rect key="frame" x="16" y="81" width="568" height="109"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="109" id="7L6-SX-nWW"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Ar-kN-2xc">
+                                <rect key="frame" x="176" y="418" width="46" height="30"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="doneEditingPressed:" destination="eyi-yM-A8V" eventType="touchUpInside" id="iiv-fy-ZLn"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="lMe-Es-TMx" firstAttribute="trailing" secondItem="Mv5-U4-MOL" secondAttribute="trailingMargin" id="Oy2-pL-0Zd"/>
+                            <constraint firstItem="lMe-Es-TMx" firstAttribute="top" secondItem="AsV-Yy-aut" secondAttribute="bottom" constant="17" id="Ucz-Co-Vbd"/>
+                            <constraint firstItem="lMe-Es-TMx" firstAttribute="leading" secondItem="Mv5-U4-MOL" secondAttribute="leadingMargin" id="taH-6U-8EX"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="dogBreadLabel" destination="lMe-Es-TMx" id="b1B-t4-O5c"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XC4-EU-oMQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3037" y="-160"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="SyB-xI-yEI">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="1Re-Wd-wnr" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="798-Pw-Ffu">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="GlS-pW-0jV" kind="relationship" relationship="rootViewController" id="vs3-kj-67y"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PP5-XJ-uBT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1558" y="-160"/>
+        </scene>
+    </scenes>
+</document>

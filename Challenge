@@ -1,0 +1,21 @@
+Programming Challenge
+---------------------
+
+* CollectionViewController (Subclass)
+ 	- Find out about delegate/data source
+
+* Display an image in each cell
+	- imageName:@"nameOfImage.png";
+
+Bonus Stretch Goals
+-------------------
+
+* Be able to press on an image and go fullscreen
+	- Segue (modal segue)
+	- Segue from CollectionViewController to ViewController with UIImageView
+
+* Be able to close fullscreen image
+
+* Fullscreen view in your storyboard use an UIImageView (UIViewController subclass)
+	- Gives properties for free
+
