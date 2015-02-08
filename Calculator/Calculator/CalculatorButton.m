@@ -18,21 +18,32 @@
     }
     else
     {
-        self.layer.cornerRadius = 10;
+        self.layer.cornerRadius = 25;
+        self.layer.borderWidth = 1;
+        self.layer.borderColor = [[UIColor clearColor]CGColor];
+        [self setBackgroundColor:[UIColor lightGrayColor]];
         
-        [self setBackgroundColor:[UIColor clearColor]];
-        [self setBackgroundImage:[UIImage imageNamed:@"button.gif"] forState:UIControlStateNormal];
+        [self addTarget:self action:@selector(highlightBorder) forControlEvents:UIControlEventTouchDown];
+        [self addTarget:self action:@selector(unHighlightBorder) forControlEvents:UIControlEventTouchUpInside];
+        [self addTarget:self action:@selector(unHighlightBorder) forControlEvents:UIControlEventTouchUpOutside];
         
+        [self setBackgroundImage:[UIImage imageNamed:@"buttonNormal.png"] forState:UIControlStateNormal];
+        [self setBackgroundImage:[UIImage imageNamed:@"button.Push.png"] forState:UIControlStateHighlighted];
+        [self setTitleColor:[UIColor blueColor] forState:UIControlStateHighlighted];
     }
-    
-    NSLog(@"-[%@ initWithCoder:%@]", self, aDecoder);
     
     return self;
 }
          
 - (void)highlightBorder
 {
-    self.layer.borderColor = [[UIColor blueColor]CGColor];
+    self.layer.borderColor = [[UIColor yellowColor]CGColor];
+    
+}
+
+- (void)unHighlightBorder
+{
+    self.layer.borderColor = [[UIColor clearColor]CGColor];
 }
 
 @end

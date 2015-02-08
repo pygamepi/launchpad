@@ -45,6 +45,11 @@
     return operand;
 }
 
+- (void)clearOperands
+{
+    [self.operandsStack removeAllObjects];
+}
+
 - (double)performOperation:(NSString *)operation
 {
     double result = 0;

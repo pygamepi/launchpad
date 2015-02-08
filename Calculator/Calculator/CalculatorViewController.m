@@ -36,7 +36,10 @@
 
 - (IBAction)enterButtonPressed
 {
-    
+    [self.brain pushOperand:self.displayLabel.text.doubleValue];
+    double result = [self.brain performOperation:self.operator];
+    self.displayLabel.text = [NSNumber numberWithDouble:result].stringValue;
+    self.operator = nil;
 }
 
 - (IBAction)numberButtonPressed:(UIButton *)sender
@@ -58,6 +61,8 @@
 {
     self.displayLabel.text = @"0";
     self.isUserInTheMiddleOfEnteringNumber = NO;
+    [self.brain clearOperands];
+    
 }
 
 @end

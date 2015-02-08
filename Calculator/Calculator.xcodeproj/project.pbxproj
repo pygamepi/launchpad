@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EF31DB501A79F4940044086E /* CalculatorButton.m in Sources */ = {isa = PBXBuildFile; fileRef = EF31DB4F1A79F4940044086E /* CalculatorButton.m */; };
+		EF31DB7B1A7A102C0044086E /* buttonNormal.png in Resources */ = {isa = PBXBuildFile; fileRef = EF31DB791A7A102C0044086E /* buttonNormal.png */; };
+		EF31DB7C1A7A102C0044086E /* buttonPush.png in Resources */ = {isa = PBXBuildFile; fileRef = EF31DB7A1A7A102C0044086E /* buttonPush.png */; };
+		EF31DB821A7A1A5D0044086E /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = EF31DB811A7A1A5D0044086E /* background.png */; };
 		EF32ACC91A71CAF000552D95 /* CalculatorBrain.m in Sources */ = {isa = PBXBuildFile; fileRef = EF32ACC81A71CAF000552D95 /* CalculatorBrain.m */; };
 		EF32ACD11A71D04200552D95 /* CalculatorBrainTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EF32ACD01A71D04200552D95 /* CalculatorBrainTests.m */; };
 		EF45E3A41A6F1EBC00E59B62 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EF45E3A31A6F1EBC00E59B62 /* main.m */; };
@@ -29,6 +33,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EF31DB4E1A79F4940044086E /* CalculatorButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalculatorButton.h; sourceTree = "<group>"; };
+		EF31DB4F1A79F4940044086E /* CalculatorButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalculatorButton.m; sourceTree = "<group>"; };
+		EF31DB791A7A102C0044086E /* buttonNormal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = buttonNormal.png; sourceTree = "<group>"; };
+		EF31DB7A1A7A102C0044086E /* buttonPush.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = buttonPush.png; sourceTree = "<group>"; };
+		EF31DB811A7A1A5D0044086E /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
 		EF32ACC71A71CAF000552D95 /* CalculatorBrain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalculatorBrain.h; sourceTree = "<group>"; };
 		EF32ACC81A71CAF000552D95 /* CalculatorBrain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalculatorBrain.m; sourceTree = "<group>"; };
 		EF32ACD01A71D04200552D95 /* CalculatorBrainTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalculatorBrainTests.m; sourceTree = "<group>"; };
@@ -86,6 +95,11 @@
 		EF45E3A01A6F1EBC00E59B62 /* Calculator */ = {
 			isa = PBXGroup;
 			children = (
+				EF31DB811A7A1A5D0044086E /* background.png */,
+				EF31DB4E1A79F4940044086E /* CalculatorButton.h */,
+				EF31DB4F1A79F4940044086E /* CalculatorButton.m */,
+				EF31DB791A7A102C0044086E /* buttonNormal.png */,
+				EF31DB7A1A7A102C0044086E /* buttonPush.png */,
 				EF45E3A51A6F1EBC00E59B62 /* AppDelegate.h */,
 				EF45E3A61A6F1EBC00E59B62 /* AppDelegate.m */,
 				EF45E3A81A6F1EBC00E59B62 /* CalculatorViewController.h */,
@@ -208,8 +222,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				EF45E3AD1A6F1EBC00E59B62 /* Main.storyboard in Resources */,
+				EF31DB821A7A1A5D0044086E /* background.png in Resources */,
+				EF31DB7B1A7A102C0044086E /* buttonNormal.png in Resources */,
 				EF45E3B21A6F1EBC00E59B62 /* LaunchScreen.xib in Resources */,
 				EF45E3AF1A6F1EBC00E59B62 /* Images.xcassets in Resources */,
+				EF31DB7C1A7A102C0044086E /* buttonPush.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -228,6 +245,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EF45E3AA1A6F1EBC00E59B62 /* CalculatorViewController.m in Sources */,
+				EF31DB501A79F4940044086E /* CalculatorButton.m in Sources */,
 				EF45E3A71A6F1EBC00E59B62 /* AppDelegate.m in Sources */,
 				EF32ACC91A71CAF000552D95 /* CalculatorBrain.m in Sources */,
 				EF45E3A41A6F1EBC00E59B62 /* main.m in Sources */,
